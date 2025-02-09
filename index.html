@@ -20,6 +20,44 @@
             </ul>
         </div>
     </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Shaun Khang</div>
+        <div class="hamburger-menu">
+            <!--basic javascript to open and close the hamburger menu-->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!--these are the lines of the burger menu-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--we add the toggleMenu here because we want to be able to close the hamburger too when we click these links-->
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contacts</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/shaun_circular.png" alt="Shaun Khang's profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Shaun Khang</h1>
+            <p class="section__text__p2">Frontend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Shaun_Khang_Resume.pdf')">Download CV</button>
+                <!--this button takes them to the contact section of my website-->
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/shaun-khang-773453348/'">
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Khaun02'">
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

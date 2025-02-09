@@ -26,12 +26,262 @@ p {
 /* TRANSITION */
 
 /* whenever we click these, will transition between 2 states styles and not be instant */
-a, .btn {
+a, 
+.btn {
     transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
 
-nav, .nav-links {
+/* everything in the nav, is flexed?  with inline and block we know, but with flex; the items can be on the left or the , also based on view width*/
+nav, 
+.nav-links {
     display: flex;
+}
+
+/* the 17vh means this will take 17% of the view height, 100% is the max */
+nav {
+    justify-content:  space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+/* gap is the spacing between the list, the list style: none means to remove the bullet points, and the rem is a unit of measurement within front-end development, another way to say pixels but not pixels */
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+/* the text-underline-offset makes it so that the underline is 1 rem unit away from the text below */
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+
+}
+
+/* when we hovered over the logo text earlier, it switched to the text cursor, but with this when we hover it makes the cursor stay the same */
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+/* when we're in desktop view, we don't see it */
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* the transition is hamburger menu turn into an x when we click it, when we click that x it will close the hamburger menu as well */
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+/* these are the actual links we see when we open the hamburger menu | not too sure how the hamburger menu actually is made though, confused on the - appearing?*/
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+/* targetting the links inside the menu */
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+/* targetting the li elements inside the .menu-links */
+.menu-links li {
+    list-style: none;
+}
+
+/* when we add the "open" class from our javascript, this is what its going to do */
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* the first span element... making the line into an x and moving it slightly because when we rotate it, it will be skewed so we also move it slightly in both x and y positions*/
+/* essentially making an x, can check this by going to our website and inspecting the hamburger menu, can even see the javascript adding the open class */
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+/* targetting the 2nd line, removing the 2nd line completely*/
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+/* all of the next parts in our page is going to be divided into sections */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    /* 0 margin on top and bottom but 10rem on the sides */
+    margin: 0 10rem;
+    box-sizing: border-box;
+    /* ensuring things are not overlapping and things look nice */
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+/* styling our profile picture image */
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+/* not too sure why these aren't just added together */
+.section__text_p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, 
+.btn-color-2 {
+    border: rgb(53,53,53) 0.1rem solid;
+}
+
+.btn-color-1:hover, 
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background-color: rgb(53,53,53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background-color: rgb(0,0,0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
 }
