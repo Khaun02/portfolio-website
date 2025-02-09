@@ -1,0 +1,37 @@
+/* GENERAL */
+
+/* google fonts, then find the ones you want, then get the import statement, remember to remove the <style> */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* we put 0 margin and padding so that we know specifically if we do add it, it's not because of the default settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* so that when we add the links to the nav, it won't instantly go to them but instead smoothly go */
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+/* whenever we click these, will transition between 2 states styles and not be instant */
+a, .btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav, .nav-links {
+    display: flex;
+}
