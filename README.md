@@ -41,4 +41,4 @@ Feel free to reach out if you have any questions or suggestions!
 
 - 📧 Email: khaunx02@gmail.com
 - 🔗 LinkedIn: https://www.linkedin.com/in/shaun-khang-773453348/
-- 🌐 Website: shaun-khang.netlify.app
+- 🌐 Website: https://shaun-khang.netlify.app/
