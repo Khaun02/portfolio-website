@@ -39,6 +39,6 @@ open index.html  # (or manually open in your browser)
 ## 📬 Contact
 Feel free to reach out if you have any questions or suggestions!
 
-📧 Email: khaunx02@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/shaun-khang-773453348/
-🌐 Website: 
+- 📧 Email: khaunx02@gmail.com
+- 🔗 LinkedIn: https://www.linkedin.com/in/shaun-khang-773453348/
+- 🌐 Website: 
