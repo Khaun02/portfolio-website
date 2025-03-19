@@ -364,7 +364,7 @@ section {
 /* flex-wrap: when the icons would be bigger than the container, it'll wrap inside the container */
 .article-container {
     display: flex;
-    text-align: initial;
+    text-align: justify;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
